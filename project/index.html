@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Automation Assignment</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+    <div class="container mx-auto px-6 py-12">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                Marketing Automation Suite
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Interactive prototypes and implementation guides for professional marketing automation workflows
+            </p>
+        </div>
+
+        <!-- Task Navigation -->
+        <div class="flex flex-wrap justify-center gap-6 mb-12">
+            <button onclick="showTask('task1')" class="task-btn group relative overflow-hidden bg-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-600 text-gray-800 hover:text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-sitemap text-2xl"></i>
+                    <div class="text-left">
+                        <div class="font-semibold">Workflow Design</div>
+                        <div class="text-sm opacity-75">Omnichannel Journey</div>
+                    </div>
+                </div>
+            </button>
+            <button onclick="showTask('task2')" class="task-btn group relative overflow-hidden bg-white hover:bg-gradient-to-r hover:from-green-500 hover:to-green-600 text-gray-800 hover:text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-comments text-2xl"></i>
+                    <div class="text-left">
+                        <div class="font-semibold">Chatbot Setup</div>
+                        <div class="text-sm opacity-75">Lead Qualification</div>
+                    </div>
+                </div>
+            </button>
+            <button onclick="showTask('task3')" class="task-btn group relative overflow-hidden bg-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-600 text-gray-800 hover:text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-link text-2xl"></i>
+                    <div class="text-left">
+                        <div class="font-semibold">Make Integration</div>
+                        <div class="text-sm opacity-75">Form Automation</div>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Task 1: Workflow Design -->
+        <div id="task1" class="task-content">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-4">
+                        <i class="fas fa-sitemap text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800">Omnichannel Lead Nurturing</h2>
+                        <p class="text-gray-600">Interactive workflow visualization</p>
+                    </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-4 text-gray-800">Live Workflow Demo</h3>
+                            <div id="workflow-container" class="border-2 border-gray-100 rounded-xl p-6 bg-gradient-to-br from-gray-50 to-white min-h-96">
+                                <!-- Workflow will be rendered here -->
+                            </div>
+                            <button onclick="animateWorkflow()" class="mt-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-play mr-2"></i>Animate Flow
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Implementation Guide</h3>
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-purple-700 mb-3 flex items-center">
+                                    <i class="fas fa-tools mr-2"></i>
+                                    Diagrams.net Setup
+                                </h4>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                                    <li>Visit <a href="https://app.diagrams.net" class="text-blue-600 underline hover:text-blue-800">app.diagrams.net</a></li>
+                                    <li>Create new diagram → Select Flowchart template</li>
+                                    <li>Use the workflow structure shown in the demo</li>
+                                    <li>Add decision diamonds for profile completion checks</li>
+                                    <li>Include parallel messaging processes (WhatsApp, SMS, Email)</li>
+                                    <li>Create the 3-day reminder loop with fallback logic</li>
+                                    <li>Export and share as public link</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-amber-700 mb-3 flex items-center">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    Key Workflow Elements
+                                </h4>
+                                <ul class="space-y-2 text-sm text-gray-700">
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Start: User Signup Trigger</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Parallel: Multi-channel Welcome Messages</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Decision: Profile Completion Status</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Loop: 3-day Reminder Cycle</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Fallback: WhatsApp → SMS Logic</li>
+                                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>End: Multiple Exit Points</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 2: Chatbot Setup -->
+        <div id="task2" class="task-content hidden">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white mr-4">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800">SwiftSell Chatbot</h2>
+                        <p class="text-gray-600">Lead qualification assistant</p>
+                    </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Interactive Chatbot Demo</h3>
+                        <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">NxtWave Career Bot</h4>
+                                        <p class="text-sm opacity-90">Lead Qualification Assistant</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="chat-container" class="h-96 overflow-y-auto p-6 bg-gray-50">
+                                <!-- Chat messages will appear here -->
+                            </div>
+                            <div class="p-6 bg-white border-t">
+                                <div id="chat-options" class="space-y-3">
+                                    <!-- Chat options will appear here -->
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="resetChat()" class="mt-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-refresh mr-2"></i>Reset Demo
+                        </button>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">SwiftSell Implementation</h3>
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-green-700 mb-3 flex items-center">
+                                    <i class="fas fa-cog mr-2"></i>
+                                    Setup Process
+                                </h4>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                                    <li>Create account at <a href="https://app.swiftsell.biz/" class="text-blue-600 underline hover:text-blue-800">SwiftSell</a></li>
+                                    <li>Start new chatbot project</li>
+                                    <li>Configure welcome message and branding</li>
+                                    <li>Build conversation flow with conditional logic</li>
+                                    <li>Set up lead capture forms</li>
+                                    <li>Configure email notifications with JSON payload</li>
+                                    <li>Test thoroughly and publish</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-blue-700 mb-3 flex items-center">
+                                    <i class="fas fa-flow-chart mr-2"></i>
+                                    Conversation Structure
+                                </h4>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <div class="flex items-center"><span class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold mr-3">1</span>Welcome & Name Collection</div>
+                                    <div class="flex items-center"><span class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold mr-3">2</span>Contact Details (Phone, Email)</div>
+                                    <div class="flex items-center"><span class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold mr-3">3</span>Qualification Questions</div>
+                                    <div class="flex items-center"><span class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold mr-3">4</span>Conditional Responses</div>
+                                    <div class="flex items-center"><span class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold mr-3">5</span>Lead Scoring & Notification</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-gray-50 to-slate-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-gray-700 mb-3 flex items-center">
+                                    <i class="fas fa-code mr-2"></i>
+                                    Sample JSON Output
+                                </h4>
+                                <pre class="text-xs bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto"><code id="json-payload">{
+  "name": "Rohit Reddy",
+  "email": "rohit@example.com", 
+  "phone": "9876543210",
+  "status": "Hot Lead",
+  "careerPath": "Data Science",
+  "source": "Webinar Bot"
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 3: Make Integration -->
+        <div id="task3" class="task-content hidden">
+            <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white mr-4">
+                        <i class="fas fa-link text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800">Make.com Integration</h2>
+                        <p class="text-gray-600">Automated form processing</p>
+                    </div>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Live Form Demo</h3>
+                        <form id="integration-form" class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border-2 border-gray-100 shadow-inner">
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                                    <input type="text" id="form-name" required 
+                                           class="w-full p-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" id="form-email" required 
+                                           class="w-full p-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="form-phone" 
+                                           class="w-full p-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-2">Interest Area</label>
+                                    <select id="form-interest" class="w-full p-4 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                                        <option value="">Select an option</option>
+                                        <option value="marketing">Marketing Automation</option>
+                                        <option value="sales">Sales Tools</option>
+                                        <option value="analytics">Analytics</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                    <i class="fas fa-paper-plane mr-2"></i>Submit Form
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="form-status" class="mt-6 p-4 rounded-lg hidden">
+                            <!-- Status messages will appear here -->
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-gray-800">Make.com Setup Guide</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-blue-700 mb-3 flex items-center">
+                                    <i class="fas fa-rocket mr-2"></i>
+                                    Quick Setup Steps
+                                </h4>
+                                <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                                    <li>Sign up for Make.com (free plan available)</li>
+                                    <li>Create new scenario</li>
+                                    <li>Add Webhook trigger module</li>
+                                    <li>Copy webhook URL to your form</li>
+                                    <li>Add Google Sheets module</li>
+                                    <li>Connect your Google account</li>
+                                    <li>Map form fields to sheet columns</li>
+                                    <li>Add Gmail module for notifications</li>
+                                    <li>Test the complete automation flow</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-yellow-700 mb-3 flex items-center">
+                                    <i class="fas fa-webhook mr-2"></i>
+                                    Webhook Configuration
+                                </h4>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <div class="flex"><span class="font-semibold w-20">Method:</span> POST</div>
+                                    <div class="flex"><span class="font-semibold w-20">Type:</span> application/json</div>
+                                    <div class="flex"><span class="font-semibold w-20">Data:</span> JSON with form fields</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+                                <h4 class="font-semibold text-green-700 mb-3 flex items-center">
+                                    <i class="fas fa-table mr-2"></i>
+                                    Google Sheets Mapping
+                                </h4>
+                                <div class="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                                    <div>Name → Column A</div>
+                                    <div>Email → Column B</div>
+                                    <div>Phone → Column C</div>
+                                    <div>Interest → Column D</div>
+                                    <div>Timestamp → Column E</div>
+                                    <div>Status → Column F</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Live Data Display -->
+                <div class="mt-12 bg-gradient-to-r from-gray-50 to-slate-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800 flex items-center">
+                        <i class="fas fa-database mr-3"></i>
+                        Live Data Preview
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                            <thead class="bg-gradient-to-r from-gray-100 to-gray-200">
+                                <tr>
+                                    <th class="px-6 py-4 border-b text-left font-semibold text-gray-700">Name</th>
+                                    <th class="px-6 py-4 border-b text-left font-semibold text-gray-700">Email</th>
+                                    <th class="px-6 py-4 border-b text-left font-semibold text-gray-700">Phone</th>
+                                    <th class="px-6 py-4 border-b text-left font-semibold text-gray-700">Interest</th>
+                                    <th class="px-6 py-4 border-b text-left font-semibold text-gray-700">Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sheets-data">
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="px-6 py-4 text-gray-500 italic text-center" colspan="5">Form submissions will appear here...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
